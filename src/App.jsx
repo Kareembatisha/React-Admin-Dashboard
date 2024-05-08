@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import TopBar from "./Components/TopBar";
 import SideBar from "./Components/SideBar";
 import { getDesignTokens } from "./theme";
+import { Outlet } from "react-router-dom";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -55,7 +56,7 @@ export default function MiniDrawer() {
 
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
-          <Typography paragraph>Lorem ipsum dolor</Typography>
+          <Outlet/>
         </Box>
       </Box>
     </ThemeProvider>
