@@ -1,7 +1,18 @@
-import React from 'react'
+import { Box, useTheme } from "@mui/material";
+import React from "react";
+import { ResponsiveLine } from "@nivo/line";
+import Line from "./Line";
+import Header from "../../Components/Header";
 
-function LineChart() {
-  return <div>Invoices Invoices</div>;
-}
+const LineChart = () => {
+  const theme = useTheme();
+  return (
+    <Box>
+      <Header title="Line Chart" subTitle="Simple Line Chart" />
 
-export default LineChart
+      <Line />
+    </Box>
+  );
+};
+
+export default LineChart;

@@ -1,7 +1,18 @@
-import React from 'react'
+import React from "react";
+import { ResponsivePie } from "@nivo/pie";
+import { Box, useTheme } from "@mui/material";
+import Pie from "./pie";
+import Header from "../../Components/Header";
 
-function PieChart() {
-  return <div>Invoices Invoices</div>;
-}
+const PieChart = () => {
+  const theme = useTheme();
+  return (
+    <Box>
+      <Header title="Pie Chart" subTitle="Simple Pie Chart" />
 
-export default PieChart
+      <Pie />
+    </Box>
+  );
+};
+
+export default PieChart;

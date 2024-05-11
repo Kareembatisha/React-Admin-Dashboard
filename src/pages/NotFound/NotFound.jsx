@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
+import Typography from "@mui/material/Typography";
+import { Box, useTheme } from "@mui/material";
 
-function NotFound() {
-  return <div>Invoices Invoices</div>;
-}
+const NotFound = () => {
+  const theme = useTheme();
+  return (
+    <Box>
+      <Typography align="center" color={theme.palette.error.main} variant="h5">
+        There is no design yet
+        <br />
+        <br />
+        Please try again later..
+      </Typography>
+    </Box>
+  );
+};
 
-export default NotFound
+export default NotFound;
